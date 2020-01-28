@@ -1,4 +1,5 @@
 const { Router } = require('express');
+const bcrypt = require('bcryptjs');
 
 const router = Router();
 const ProjectModels =  require('./../models/projectModels')
@@ -10,9 +11,7 @@ router.get('/', async (req, res, next) => {
         Project: await ProjectModels.fetchProjects(),
     })
 })
-// router.post('/register', (req, res, next) => {
 
-// })
 
 
 module.exports = router;
